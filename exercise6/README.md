@@ -4,13 +4,13 @@ A web application for the BEST law firm in the west of the Mississippi that prov
 ## Screenshots
 
 ### Home Page
-![Home Page](screenshots/home.jpeg)
+![Home Page](home.jpeg)
 
 ### Login Page
-![Login Page](screenshots/login.jpeg)
+![Login Page](login.jpeg)
 
 ### Create Account Page
-![Create Account](screenshots/create-account.jpeg)
+![Create Account](create-account.jpeg)
 
 ### Profile Page
-![Profile Page](screenshots/profile.jpeg)# exercise6
+![Profile Page](profile.jpeg)
