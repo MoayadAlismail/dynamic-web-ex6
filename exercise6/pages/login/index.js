@@ -1,9 +1,23 @@
-import Login from "@/components/LoginForm"
+import LoginForm from "@/components/LoginForm";
+import { loginUser } from "@/utils/firebase/auth";
+import { useRouter } from 'next/router';
+
 export default function Login() {
-    return(
+    const router = useRouter();
+
+    const handleLogin = async (formData) => {
+        try {
+            await loginUser(formData.email, formData.password);
+            router.push('/profile');
+        } catch (error) {
+            alert(error.message);
+        }
+    };
+
+    return (
         <div>
-        <Login/>
-        <h1>hello! Login.</h1>
+            <h1 style={{ textAlign: 'center' }}>Login</h1>
+            <LoginForm onSubmit={handleLogin} />
         </div>
     );
 }

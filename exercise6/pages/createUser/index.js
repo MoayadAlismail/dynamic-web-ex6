@@ -1,9 +1,23 @@
 import CreateUserForm from "@/components/CreateUserForm";
+import { createUser } from "@/utils/firebase/auth";
+import { useRouter } from 'next/router';
+
 export default function CreateUser() {
-    return(
+    const router = useRouter();
+
+    const handleCreateUser = async (formData) => {
+        try {
+            await createUser(formData.email, formData.password, formData.displayName);
+            router.push('/profile');
+        } catch (error) {
+            alert(error.message);
+        }
+    };
+
+    return (
         <div>
-        <CreateUserForm/>
-        <h1>hello! Create User.</h1>
+            <h1 style={{ textAlign: 'center' }}>Create Account</h1>
+            <CreateUserForm onSubmit={handleCreateUser} />
         </div>
     );
 }

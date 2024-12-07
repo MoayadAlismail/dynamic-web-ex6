@@ -1,12 +1,8 @@
-import Image from "next/image";
-// import styles from "./page.module.css";
-// import Header from '../app/components/Header';
-
 export default function Home() {
   return (
-    <div>
-      <h1>hi</h1>
+    <div className="container">
+      <h1>Welcome to our law firm. Best legal advice money can buy!</h1>
+      <p>Please login or create an account to get started.</p>
     </div>
-      // <Header />
   );
-}
+} 
