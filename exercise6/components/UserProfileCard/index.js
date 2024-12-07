@@ -5,7 +5,6 @@ export default function UserProfileCard({ user }) {
 
     return (
         <div className={styles.card}>
-            <h2>Profile</h2>
             <div className={styles.profileInfo}>
                 <p><strong>Name:</strong> {user.displayName}</p>
                 <p><strong>Email:</strong> {user.email}</p>

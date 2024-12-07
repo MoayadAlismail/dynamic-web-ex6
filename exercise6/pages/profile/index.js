@@ -15,7 +15,7 @@ export default function Profile({ isLoggedIn, user }) {
 
     return (
         <div>
-            <h1>Profile</h1>
+            <h1 style={{textAlign:'center'}} >Your Profile</h1>
             <UserProfileCard user={user} />
         </div>
     );
